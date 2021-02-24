@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  background-image: url("/madia/girl1.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.wrapper::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+}
+
+.wrapper h1 {
+  color: rgb(8, 115, 236);
+  font-family: "myriad pro";
+  font-size: 4em;
+  font-style: italic;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.wrapper p {
+  color: rgb(255, 255, 255);
+  font-family: "myriad pro";
+  font-size: 2em;
+  font-style: italic;
+  letter-spacing: 8px;
+  z-index: 2;
+}
+
+.stats {
+  background: rgb(8, 115, 236);
+  padding: 1em;
+  border-radius: 10px;
+  width: 200%;
+  color: #fff;
+
+  clip-path: circle(10% at 90% 30%);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.stats:hover {
+  clip-path: circle(70%);
+  background-color: rgb(2, 32, 88);
+}
+
+.stats label {
+  float: right;
+  color: white;
+  font-weight: bolder;
+  font-size: 2em;
+  transition: color 0.6s;
+  position: relative;
+  margin-right: 4.5%;
+  margin-top: 4%;
+}
+
+.stats:hover label {
+  color: rgba(255, 255, 255, 0);
+}
+
+.stats ul li {
+  list-style: none;
+  font-family: "myriad pro";
+  text-transform: uppercase;
+  margin-top: 2em;
+}
+
+.stats ul li:hover {
+  color: rgb(8, 115, 236);
+}
+
+/* About Me */
+.about-me {
+  background-color: #ccc;
+  display: flex;
+  padding: 2em;
+}
+.about-me img {
+  -webkit-clip-path: circle(40%);
+  width: 300px;
+  height: 200px;
+}
+
+.about-me div {
+  width: 50%;
+  margin-top: 2em;
+}
+
+.about-me h1 {
+  font-family: "myriad pro";
+  color: rgb(8, 115, 236);
+}
+
+.about-me p {
+  font-family: "calibri light";
+  color: rgb(0, 0, 0);
+  text-justify: inter-word;
+  line-height: 1.5em;
+}
